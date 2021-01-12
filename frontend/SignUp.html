@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Sign Up</title>
+</head>
+<body>
+    <div class="SignUp">
+        <h2>SignUp</h2>
+        <input type="text" id="first_n" placeholder="First name:"><br>
+        <input type="text" id="last_n" placeholder="Last name:"><br>
+        <input type="text" id="url" placeholder="Avatar url:"><br>
+        <input type="email" id="email" placeholder="Email:"><br>
+        <input type="text" id="password" placeholder="Password:"><br>
+        <input type="button" id="butt" value="Sign Up" v-on:click="register()">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
