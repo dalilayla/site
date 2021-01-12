@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+	
+	<input type="search" name="searchbar" id="searchbar">
+    <input type="button" value="Search" onclick="search()">
+
+    <br><br><br>
+  
+    <div id="app">
+        <div class="card" v-for="(result,index) in results">
+            <img :src="result.avatar" v-bin:alt="results">
+            <p class="mytext">{{ result.first_name }}</p>
+            <p class="mytext">{{ result.last_name }}</p>
+            <input type="button" value="delete" v-on:click="deleteById(index)">
+        </div>
+	</div>
+	<div id="register">
+		
+	</div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
