@@ -6,9 +6,9 @@
     margin: auto;
     margin-top: 3px;
     margin-right: 5px;
-    height: 23rem;
-    width: 15rem;
-    float:left;
+    height: 17rem;
+    width: 13rem;
+    float: left;
 }
 .SignUp{
     height: 15rem;
@@ -28,4 +28,8 @@ a{
 a:hover{
     color: rgb(53, 52, 52);
     font-style: italic;
+}
+.picture{
+    height: 128px;
+    width: 128px;
 }

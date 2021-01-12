@@ -14,7 +14,7 @@
     
     <div id="app">
         <div class="card" v-for="(result,index) in results">
-            <img :src="result.avatar" v-bin:alt="results">
+            <img :src="result.avatar" v-bin:alt="results" class="picture">
             <p class="mytext">{{ result.first_name }}</p>
             <p class="mytext">{{ result.last_name }}</p>
             <input type="button" value="delete" v-on:click="deleteById(index)">
