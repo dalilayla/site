@@ -10,12 +10,22 @@
     <title>Document</title>
 </head>
 <body>
-	
-	<input type="search" name="searchbar" id="searchbar">
-    <input type="button" value="Search" onclick="search()">
 
-    <br><br><br>
-  
+    <div class="SignUp">
+        <h2>SignUp</h2>
+        
+        <h4>First name:</h4>
+        <input type="text" id="first_n"><br>
+        <h4>Last name:</h4>
+        <input type="text" id="last_n"><br>
+        <h4>Avatar url:</h4>
+        <input type="text" id="url"><br>
+        <h4>Email:</h4>
+        <input type="email" id="email"><br>
+        <h4>Password:</h4>
+        <input type="text" id="password"><br>
+        <input type="button" id="butt" value="Sign Up" v-on:click="register()">
+    </div>
     <div id="app">
         <div class="card" v-for="(result,index) in results">
             <img :src="result.avatar" v-bin:alt="results">

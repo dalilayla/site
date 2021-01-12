@@ -15,6 +15,9 @@ const vn = new Vue({
             this.results.splice(index,1)
             alert('deleted ' + id)
             await axios.delete("http://localhost:3000/users/" + id)
+        },
+        async register(){
+            
         }
     }
 });

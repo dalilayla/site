@@ -67,9 +67,9 @@ const port = 3000;
       if(user === null){
         return res.status(404).send({msg:"not found"})
       }
-      await user.destroy;
+      await user.destroy();
       return res.status(200).send({msg:"user was deleted"})
-    })
+    });
     
 })();
 
