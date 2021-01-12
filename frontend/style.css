@@ -24,8 +24,6 @@
 }
 a{
     color: rgb(1,1,1);
-    border: rgb(202, 202, 202) inset;
-    border-radius: 10%;
 }
 a:hover{
     color: rgb(53, 52, 52);
