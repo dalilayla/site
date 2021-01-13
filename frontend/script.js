@@ -12,12 +12,19 @@ const vn = new Vue({
     methods:{
         async deleteById(index) {
             let id = this.results[index].id
+            if(confirm('delete '+id+'?')){
             this.results.splice(index,1)
-            confirm('delete '+id+'?')
-            await axios.delete("http://localhost:3000/users/" + id)
+            await axios.delete("http://localhost:3000/users/" + id)}
         },
         async register(){
-            if()
+            if(first_n.value === null || last_n.value === null || url.value === null || email.value === null || password.value === null ){
+                alert("заполните все данные")
+                return
+            }
+            else{
+            await axios.post("http://localhost:3000/users",{"first_name":`${first_n.value}`,"last_name":`${last_n.value}`,"avatar":`${url.value}`,"email":`${email.value}`,"password":`${password.value}`})
+            alert("пользователь создан")
+            }
         }
     }
 });
