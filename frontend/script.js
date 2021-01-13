@@ -17,7 +17,7 @@ const vn = new Vue({
             await axios.delete("http://localhost:3000/users/" + id)
         },
         async register(){
-            
+            alert("adadw");
         }
     }
 });
