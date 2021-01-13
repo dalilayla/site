@@ -45,7 +45,9 @@ const port = 3000;
         const user = await User.create({ 
             first_name: req.body.first_name,
             last_name: req.body.last_name,
-            avatar: req.body.avatar
+            avatar: req.body.avatar,
+            email:req.body.email,
+            password:req.body.password
          });}
         res.status(201).send('{"code":201}');
     });

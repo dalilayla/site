@@ -22,11 +22,11 @@
     font-size: 120%;
 }
 a{
-    color: rgb(1,1,1);
+    color: rgb(53, 52, 52);
     font-family: cursive;
 }
 a:hover{
-    color: rgb(53, 52, 52);
+    color: rgb(1,1,1);
     font-style: italic;
 }
 .picture{
