@@ -17,7 +17,7 @@
             <img :src="result.avatar" v-bin:alt="results" class="picture">
             <p class="mytext">{{ result.first_name }}</p>
             <p class="mytext">{{ result.last_name }}</p>
-            <input type="button" value="delete" v-on:click="deleteById(index)">
+            <input type="button" value="delete" class="mytext" v-on:click="deleteById(index)">
         </div>
 	</div>
 	<div id="register">
