@@ -17,13 +17,18 @@ const vn = new Vue({
             await axios.delete("http://localhost:3000/users/" + id)}
         },
         async register(){
-            if(first_n.value === null || last_n.value === null || url.value === null || email.value === null || password.value === null ){
+            if(first_n.value === null || last_n.value === null || avatarka.value === null || email.value === null || password.value === null ){
                 alert("заполните все данные")
                 return
             }
             else{
-            await axios.post("http://localhost:3000/users",{"first_name":`${first_n.value}`,"last_name":`${last_n.value}`,"avatar":`${url.value}`,"email":`${email.value}`,"password":`${password.value}`})
+            await axios.post("http://localhost:3000/users",{"first_name":`${first_n.value}`,"last_name":`${last_n.value}`,"avatar":`${avatarka.value}`,"email":`${email.value}`,"password":`${password.value}`})
             alert("пользователь создан")
+            first_n.value=null;
+            last_n.value=null;
+            avatarka.value=null;
+            email.value=null;
+            password.value=null;
             }
         }
     }

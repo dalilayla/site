@@ -53,7 +53,7 @@ const port = 3000;
     });
 
     app.get('/users/:id', async (req,res) => {
-      if (req.params.id < 1) {
+      if (req.params.id < 0) {
         return res.status(400).send({msg:"negative index"})
       }
       user = await User.findByPk(req.params.id);
@@ -64,7 +64,7 @@ const port = 3000;
     });
 
     app.delete('/users/:id', async (req,res) => {
-      if (req.params.id < 1) {
+      if (req.params.id < 0) {
         return res.status(400).send({msg:"negative index"})
       }
       user = await User.findByPk(req.params.id);
