@@ -12,36 +12,31 @@
     <title>Home</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+    <div class="card text-center">
+        <div class="card-header">
+          <ul class="nav nav-tabs card-header-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="SignUp.html">Sign Up</a>
             </li>
           </ul>
         </div>
-    </nav>    
-    <div id="app">
-        <div class="card-deck">
-            <div class="card bg-light mb-3 border-info mb-3" style="max-width: 15rem; text-align: center;" v-for="(result,index) in results">
-                <div class="card-body">
-                    <img :src="result.avatar" v-bin:alt="results" class="card-img-top picture">
-                    <p class="mytext text-info card-text">{{ result.first_name }}</p>
-                    <p class="mytext text-info card-text">{{ result.last_name }}</p>
-                    <input type="button" value="delete" class="mytext btn btn-danger" style="width: fit-content; margin: auto;" v-on:click="deleteById(index)">
+        <br> 
+        <div id="app">
+            <div class="card-deck">
+                <div class="card bg-light mb-3 border-info mb-3" style="max-width: 15rem; text-align: center;" v-for="(result,index) in results">
+                    <div class="card-body">
+                        <img :src="result.avatar" v-bin:alt="results" class="card-img-top picture">
+                        <p class="mytext text-info card-text">{{ result.first_name }}</p>
+                        <p class="mytext text-info card-text">{{ result.last_name }}</p>
+                        <input type="button" value="delete" class="mytext btn btn-danger" style="width: fit-content; margin: auto;" v-on:click="deleteById(index)">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    
     
     <script src="script.js"></script>
 </body>
