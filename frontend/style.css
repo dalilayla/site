@@ -11,7 +11,7 @@
     float: left;
 }
 .SignUp{
-    height: 15rem;
+    height: 17rem;
     width: 15rem;
     margin: auto;
     text-align: center;
@@ -24,6 +24,7 @@
 a{
     color: rgb(53, 52, 52);
     font-family: cursive;
+    font-size: large;
 }
 a:hover{
     color: rgb(1,1,1);
