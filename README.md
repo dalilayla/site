@@ -13,8 +13,8 @@ It requires for backend:
 
 To install them just open 'powershell' in 'backend' folder, then type this:
 
-<npm install expressjs>
-
-<npm install sequalize>
-
-<npm install cors>
+```sh
+$ npm install expressjs
+$ npm install sequalize
+$ npm install cors
+```

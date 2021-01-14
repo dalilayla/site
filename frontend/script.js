@@ -17,7 +17,7 @@ const vn = new Vue({
             await axios.delete("http://localhost:3000/users/" + id)}
         },
         async register(){
-            if(first_n.value === null || last_n.value === null || avatarka.value === null || email.value === null || password.value === null ){
+            if(first_n.value === "" || last_n.value === "" || avatarka.value === "" || email.value === "" || password.value === ""){
                 alert("заполните все данные")
                 return
             }
