@@ -7,7 +7,9 @@ It requires for backend:
 ---------------------------------------------------------
 
 1.Sequelize
+
 2.ExpressJs
+
 3.Cors
 
 
