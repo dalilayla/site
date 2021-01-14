@@ -1,15 +1,3 @@
-.card{
-    text-align: center;
-    border: solid 2px rgb(72, 174, 114);
-    background-color:rgb(132, 174, 72);
-    border-radius: 10%;
-    margin: auto;
-    margin-top: 3px;
-    margin-right: 5px;
-    height: 17rem;
-    width: 13rem;
-    float: left;
-}
 .SignUp{
     height: 17rem;
     width: 15rem;
@@ -31,6 +19,7 @@ a:hover{
     font-style: italic;
 }
 .picture{
+    margin: auto;
     height: 128px;
     width: 128px;
 }

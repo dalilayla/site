@@ -18,7 +18,11 @@ const vn = new Vue({
         },
         async register(){
             if(first_n.value === "" || last_n.value === "" || avatarka.value === "" || email.value === "" || password.value === ""){
-                alert("заполните все данные")
+                alert("Заполните все данные")
+                return
+            }
+            if(check.checked===false){
+                alert("Согласитесь с нашими условиями!")
                 return
             }
             else{
