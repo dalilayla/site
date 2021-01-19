@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Home</title>
-    <style>body {background: url("https://media.istockphoto.com/vectors/seamless-thin-linear-pattern-abstract-geometric-background-stylish-vector-id1174841576?k=6&m=1174841576&s=612x612&w=0&h=ZOWQh2tDxNtItnXtjPFxEo-hO9ASzo0VviHJyDAR1qI=");}</style>
+    <!-- <style>body {background: url("https://media.istockphoto.com/vectors/seamless-thin-linear-pattern-abstract-geometric-background-stylish-vector-id1174841576?k=6&m=1174841576&s=612x612&w=0&h=ZOWQh2tDxNtItnXtjPFxEo-hO9ASzo0VviHJyDAR1qI=");}</style> -->
 </head>
 <body>
     <div class="card text-center">
@@ -26,7 +26,7 @@
         </div>
         <br> 
         <div id="app">
-            <div class="card-deck">
+            <div class="card-deck" style="background: url('https://media.istockphoto.com/vectors/seamless-thin-linear-pattern-abstract-geometric-background-stylish-vector-id1174841576?k=6&m=1174841576&s=612x612&w=0&h=ZOWQh2tDxNtItnXtjPFxEo-hO9ASzo0VviHJyDAR1qI=');">
                 <div class="card bg-light mb-3 border-info mb-3" style="max-width: 15rem; text-align: center;" v-for="(result,index) in results">
                     <div class="card-body">
                         <img :src="result.avatar" v-bin:alt="results" class="card-img-top picture">
