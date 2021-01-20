@@ -74,6 +74,18 @@ const port = 3000;
       await user.destroy();
       return res.status(200).send({msg:"user was deleted"})
     });
+    app.put('/users/:id', async(req,res) => {
+      user = await User.findByPk(req.params.id)
+      if (user === null)
+          return res.status(404).send({ msg: "Not found" })
+
+      user.first_name = req.body.first_name
+      user.last_name = req.body.last_name
+      user.avatar = req.body.avatar
+      
+      await user.save()
+      res.status(200).send({ msg: "User was updated" })
+  });
     
 })();
 
