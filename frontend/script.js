@@ -14,7 +14,7 @@ const vn = new Vue({
             let id = this.results[index].id
             if(confirm('delete '+id+'?')){
             this.results.splice(index,1)
-            await axios.delete("http://localhost:3000/users/" + id)}
+            await axios.delete("https://daleka.herokuapp.com/users/" + id)}
         },
         async register(){
             if(first_n.value === "" || last_n.value === "" || avatarka.value === "" || email.value === "" || password.value === ""){
@@ -26,7 +26,7 @@ const vn = new Vue({
                 return
             }
             else{
-            await axios.post("http://localhost:3000/users",{"first_name":`${first_n.value}`,"last_name":`${last_n.value}`,"avatar":`${avatarka.value}`,"email":`${email.value}`,"password":`${password.value}`})
+            await axios.post("https://daleka.herokuapp.com/users",{"first_name":`${first_n.value}`,"last_name":`${last_n.value}`,"avatar":`${avatarka.value}`,"email":`${email.value}`,"password":`${password.value}`})
             alert("пользователь создан")
             first_n.value=null;
             last_n.value=null;
