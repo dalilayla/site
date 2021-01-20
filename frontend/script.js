@@ -33,7 +33,11 @@ const vn = new Vue({
             avatarka.value=null;
             email.value=null;
             password.value=null;
+            check.checked=false;
             }
+        }
+        async edit(){
+            
         }
     }
 });
