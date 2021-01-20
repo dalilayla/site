@@ -1,4 +1,4 @@
-const url = "http://localhost:3000/users";
+const url = "https://daleka.herokuapp.com/users";
 const vn = new Vue({
     el:"#app",
     data:{
