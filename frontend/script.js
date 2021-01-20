@@ -36,8 +36,6 @@ const vn = new Vue({
             check.checked=false;
             }
         }
-        async edit(){
-            
-        }
+        
     }
 });
