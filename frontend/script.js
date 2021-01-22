@@ -2,7 +2,14 @@ const url = "https://daleka.herokuapp.com/users";
 const vn = new Vue({
     el:"#app",
     data:{
-        results:[]
+        results:[],
+        obj: {
+            first_name: null,
+            last_name: null,
+            avatar: null,
+            email:null,
+            password:null
+        },
     },
     mounted(){
         axios.get(url).then(res=>{
@@ -35,8 +42,18 @@ const vn = new Vue({
             password.value=null;
             check.checked=false;
             }
-        }
-        
-        
+        },
+        async edit(index){
+            
+            await axios.put()
+        } 
     }
 });
+function divdrop(index){
+    if(document.getElementById("drop").style.display!="none"){
+        document.getElementById("drop").style.display="none";
+    }else{
+        document.getElementById("drop").style.display="block"
+        document.getElementById("")
+    }
+}

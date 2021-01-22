@@ -26,13 +26,21 @@
         <br> 
         <div id="app">
             <div class="card-deck" style="background: url('https://media.istockphoto.com/vectors/seamless-thin-linear-pattern-abstract-geometric-background-stylish-vector-id1174841576?k=6&m=1174841576&s=612x612&w=0&h=ZOWQh2tDxNtItnXtjPFxEo-hO9ASzo0VviHJyDAR1qI='); height: 500rem;">
-                <div class="card bg-light mb-3 border-info mb-3" style="max-width: 15rem; text-align: center;" v-for="(result,index) in results">
+                <div class="card bg-light mb-3 border-info mb-3" id="userCard" style="max-width: 15rem; text-align: center; height: 20rem;" v-for="(result,index) in results">
                     <div class="card-body">
                         <img :src="result.avatar" v-bin:alt="results" class="card-img-top picture">
                         <p class="mytext text-info card-text">{{ result.first_name }}</p>
                         <p class="mytext text-info card-text">{{ result.last_name }}</p>
                         <input type="button" value="delete" class="mytext btn btn-danger" style="width: fit-content; margin: auto;" v-on:click="deleteById(index)">
-                        <input type="button" value="edit" class="mytext btn btn-primary" style="width: fit-content; margin: auto;" v-on:click="edit(index)">
+                        <input type="button" value="edit" class="mytext btn btn-primary" style="width: fit-content; margin: auto;" v-on:click="divdrop(index)">
+                        <div id="drop" style="display: none;">
+                          <input type="text" id="editName" class="mytext form-control" placeholder="Enter First name:" v-model="result.first_name" required><br><br>
+                          <input type="text" id="editSurname" class="mytext form-control" placeholder="Enter Last name:" v-model="result.last_name" required><br><br>
+                          <input type="text" id="editAvatar" class="mytext form-control" placeholder="Enter Avatar url:" v-model="result.avatar" required><br><br>
+                          <input type="email" id="editEmail" class="mytext form-control" placeholder="Enter Email:" v-model="result.email" required><br><br>
+                          <input type="password" id="editPassword" class="mytext form-control" placeholder="Password:" v-model="result.password" required><br><br>
+                          <input type="button" value="save" class="mytext btn btn-outline-secondary" v-on:click="edit(index)">
+                        </div>
                     </div>
                 </div>
             </div>
