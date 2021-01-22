@@ -44,20 +44,19 @@ const vn = new Vue({
             }
         },
         async edit(index){
-            let id = this.results[index].id;
-            var allinputs = document.getElementById("app");
-            let inputs = allinputs.children[index].getElementsByClassName("card-body")[0].getElementsByTagName("input");
-            if(inputs[0].value === "" || inputs[1].value === "" || inputs[2].value === "" )  
-                alert("Fill in all the fields");
-            else{
-                var OldObj = {
-                    first_name: inputs[0].value,
-                    last_name: inputs[1].value,
-                    avatar: inputs[2].value,
-                };
-                await axios.put(url + "/" + id, OldObj)
-                alert("User edited id:" + id);
-            }
+            let id = this.results[index].id
+            let newObj = this.results[index]
+            if(editName.value === "" || editSurname.value === "" || editAvatar.value === "" || editEmail.value === "" || editPassword.value === "") alert("Заполните все данные")
+
+            newUser = {
+                first_name: newObj.first_name,
+                last_name: newObj.last_name,
+                password: newObj.password,
+                email:  newObj.email,
+                avatar: newObj.avatar
+            };
+            await axios.put(url + "/" + id, newUser)
+            alert("User edited id:" + id);
         }
     }
 });
