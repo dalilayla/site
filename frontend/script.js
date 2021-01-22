@@ -37,5 +37,6 @@ const vn = new Vue({
             }
         }
         
+        
     }
 });
