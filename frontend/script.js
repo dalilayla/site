@@ -44,16 +44,20 @@ const vn = new Vue({
             }
         },
         async edit(index){
-            
-            await axios.put()
-        } 
+            let id = this.results[index].id;
+            var allinputs = document.getElementById("app");
+            let inputs = allinputs.children[index].getElementsByClassName("card-body")[0].getElementsByTagName("input");
+            if(inputs[0].value === "" || inputs[1].value === "" || inputs[2].value === "" )  
+                alert("Fill in all the fields");
+            else{
+                var OldObj = {
+                    first_name: inputs[0].value,
+                    last_name: inputs[1].value,
+                    avatar: inputs[2].value,
+                };
+                await axios.put(url + "/" + id, OldObj)
+                alert("User edited id:" + id);
+            }
+        }
     }
 });
-function divdrop(index){
-    if(document.getElementById("drop").style.display!="none"){
-        document.getElementById("drop").style.display="none";
-    }else{
-        document.getElementById("drop").style.display="block"
-        document.getElementById("")
-    }
-}

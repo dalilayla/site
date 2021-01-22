@@ -21,6 +21,9 @@
             <li class="nav-item">
               <a class="nav-link" href="SignUp.html">Sign Up</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="edit.html">Edit</a>
+            </li>
           </ul>
         </div>
         <br> 
@@ -32,15 +35,6 @@
                         <p class="mytext text-info card-text">{{ result.first_name }}</p>
                         <p class="mytext text-info card-text">{{ result.last_name }}</p>
                         <input type="button" value="delete" class="mytext btn btn-danger" style="width: fit-content; margin: auto;" v-on:click="deleteById(index)">
-                        <input type="button" value="edit" class="mytext btn btn-primary" style="width: fit-content; margin: auto;" v-on:click="divdrop(index)">
-                        <div id="drop" style="display: none;">
-                          <input type="text" id="editName" class="mytext form-control" placeholder="Enter First name:" v-model="result.first_name" required><br><br>
-                          <input type="text" id="editSurname" class="mytext form-control" placeholder="Enter Last name:" v-model="result.last_name" required><br><br>
-                          <input type="text" id="editAvatar" class="mytext form-control" placeholder="Enter Avatar url:" v-model="result.avatar" required><br><br>
-                          <input type="email" id="editEmail" class="mytext form-control" placeholder="Enter Email:" v-model="result.email" required><br><br>
-                          <input type="password" id="editPassword" class="mytext form-control" placeholder="Password:" v-model="result.password" required><br><br>
-                          <input type="button" value="save" class="mytext btn btn-outline-secondary" v-on:click="edit(index)">
-                        </div>
                     </div>
                 </div>
             </div>

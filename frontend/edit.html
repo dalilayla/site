@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Edit</title>
+    <style>body {background: url("https://media.istockphoto.com/vectors/seamless-thin-linear-pattern-abstract-geometric-background-stylish-vector-id1174841576?k=6&m=1174841576&s=612x612&w=0&h=ZOWQh2tDxNtItnXtjPFxEo-hO9ASzo0VviHJyDAR1qI=");}</style>
+</head>
+<body>
+
+    <div class="card text-center">
+        <div class="card-header">
+            <ul class="nav nav-tabs card-header-tabs">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="SignUp.html">Sign Up</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="edit.html">Edit</a>
+              </li>
+            </ul>
+          </div>
+          <br> 
+        <div id="app" class="card text-white bg-info mb-3 border-secondary mb-3" style="height: 40rem; width: 25rem; margin: auto; text-align: center;">
+            <div class="card-header mytext" style="font-size: xx-large;">Edit</div>
+            <div class="card-body"> 
+                <input type="text" id="editId" placeholder="Enter Id:" required><br><br>
+                <input type="text" id="editName" class="mytext form-control" placeholder="Enter First name:" v-model="results[editId.value-1].first_name" required><br><br>
+                <input type="text" id="editSurname" class="mytext form-control" placeholder="Enter Last name:" v-model="results[editId.value-1].last_name" required><br><br>
+                <input type="text" id="editAvatar" class="mytext form-control" placeholder="Enter Avatar url:" v-model="results[editId.value-1].avatar" required><br><br>
+                <input type="email" id="editEmail" class="mytext form-control" placeholder="Enter Email:" v-model="results[editId.value-1].email" required><br><br>
+                <input type="text" id="editPassword" class="mytext form-control" placeholder="Password:" v-model="results[editId.value-1].password" required><br><br>
+                <a href="index.html"><input type="button" value="save" class="mytext btn btn-outline-secondary" v-on:click="edit(editId.value-1)"></a>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
