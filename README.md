@@ -1,7 +1,7 @@
 Site
 ==========================================================
 
->This is my first site, that i create during my education
+>This is my first site, that i createt during my education
 
 It requires for backend:
 ---------------------------------------------------------
@@ -15,7 +15,7 @@ It requires for backend:
 
 To install them just open 'powershell' in 'backend' folder, then type this:
 
-```sh
+```bash
 $ npm install expressjs
 $ npm install sequalize
 $ npm install cors
