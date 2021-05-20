@@ -1,7 +1,7 @@
 Site
 ==========================================================
 
->This is my first site, that i createt during my education
+>This is my first site, that i created during my education
 
 It requires for backend:
 ---------------------------------------------------------
@@ -13,10 +13,11 @@ It requires for backend:
 3.Cors
 
 
-To install them just open 'powershell' in 'backend' folder, then type this:
-
+To start 
 ```bash
+$ cd backend
 $ npm install expressjs
 $ npm install sequalize
 $ npm install cors
 ```
+Then site will start at localstorage:xxxx
